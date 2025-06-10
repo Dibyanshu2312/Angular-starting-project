@@ -1,0 +1,43 @@
+<div style="padding: 20px; max-width: 300px; margin: 0 auto;">
+      <h2>Basic Form</h2>
+      
+      <!-- Name Input -->
+      <div style="margin-bottom: 15px;">
+        <label>Name:</label><br>
+        <input 
+          type="text" 
+          [(ngModel)]="name"
+          [placeholder]="namePlaceholder"
+          (keyup)="checkForm()"
+          style="width: 100%; padding: 5px;">
+        <small>{{charCount}} characters</small>
+      </div>
+
+      <!-- Email Input -->
+      <div style="margin-bottom: 15px;">
+        <label>Email:</label><br>
+        <input 
+          type="email" 
+          [(ngModel)]="email"
+          [disabled]="isEmailDisabled"
+          (keyup)="checkForm()"
+          (keydown.escape)="clearEmail()"
+          style="width: 100%; padding: 5px;">
+        <small>Press ESC to clear</small>
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        [disabled]="!canSubmit"
+        (click)="submit()"
+        (keydown.enter)="submit()"
+        style="padding: 10px 20px; background: blue; color: white; border: none;">
+        {{buttonText}}
+      </button>
+
+      <!-- Show Data -->
+      <div style="margin-top: 20px; padding: 10px; background: #f0f0f0;">
+        <p>Name: {{name}}</p>
+        <p>Email: {{email}}</p>
+      </div>
+    </div>

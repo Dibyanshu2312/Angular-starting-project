@@ -1,0 +1,165 @@
+ .analytics-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 450px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .analytics-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .time-filter {
+      padding: 0.75rem 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 12px;
+      background: white;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .metric-card {
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 16px;
+      position: relative;
+      text-align: center;
+    }
+
+    .metric-value {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .metric-change {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 8px;
+    }
+
+    .metric-change.positive {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .chart-container {
+      margin-bottom: 2rem;
+    }
+
+    .chart-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .chart-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .chart {
+      display: flex;
+      align-items: end;
+      height: 150px;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .bar {
+      flex: 1;
+      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+      border-radius: 8px 8px 0 0;
+      min-height: 20px;
+      animation: growUp 1s ease-out;
+    }
+
+    @keyframes growUp {
+      from { height: 0; }
+    }
+
+    .chart-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .progress-section h4 {
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .progress-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .progress-label {
+      font-size: 0.9rem;
+      color: #333;
+      min-width: 120px;
+    }
+
+    .progress-bar {
+      flex: 1;
+      height: 8px;
+      background: #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+      border-radius: 4px;
+      transition: width 1s ease-out;
+    }
+
+    .progress-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #667eea;
+      min-width: 40px;
+    }

@@ -1,0 +1,18 @@
+<label for="colorInput">Select a color:</label>
+<select id="colorInput" [(ngModel)]="selectedColor">
+  <option value="">--Choose--</option>
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="green">Green</option>
+</select>
+
+<div [ngSwitch]="selectedColor">
+  <p *ngSwitchCase="'red'" [style.color]="'red'">You selected red</p>
+  <p *ngSwitchCase="'blue'" [style.color]="'blue'">You selected blue</p>
+  <p *ngSwitchCase="'green'" [style.color]="'green'">You selected green</p>
+  <p *ngSwitchDefault>Please select a color</p>
+</div>
+
+<ul [ngStyle]="{'list-style': 'none'}">
+  <li *ngFor="let fruit of items; let index = index" >{{index+1}} .{{fruit}}</li>
+</ul>

@@ -1,0 +1,42 @@
+<div class="profile-card">
+      <div class="profile-header">
+        <div class="avatar-container">
+          <img 
+            src="profile.jpeg" 
+            alt="Dibyanshu sahoo avatar"
+            class="avatar"
+            loading="lazy"
+          >
+          <div class="status-indicator online"></div>
+        </div>
+        <div class="user-info">
+          <h3>{{ userName() }}</h3>
+          <p>{{ userRole() }}</p>
+          <span class="user-status">Online</span>
+        </div>
+      </div>
+      
+      <div class="stats-grid">
+        @for (stat of userStats(); track stat.label) {
+          <div class="stat-item">
+            <span class="stat-number">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        }
+      </div>
+
+      <div class="recent-activity">
+        <h4>Recent Activity</h4>
+        <div class="activity-list">
+          @for (activity of activities(); track activity.id) {
+            <div class="activity-item">
+              <div class="activity-dot"></div>
+              <div class="activity-content">
+                <span class="activity-text">{{ activity.text }}</span>
+                <span class="activity-time">{{ activity.time }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,44 @@
+<div class="actions-card">
+      <div class="card-header">
+        <h3>Quick Actions</h3>
+      </div>
+      
+      <div class="actions-grid">
+        @for (action of actions(); track action.id) {
+          <button 
+            class="action-btn"
+            [style.background]="action.color"
+            (click)="handleAction(action.id)">
+            <div class="action-icon">{{ action.icon }}</div>
+            <span class="action-title">{{ action.title }}</span>
+          </button>
+        }
+      </div>
+
+      <div class="recent-section">
+        <h4>Recent Actions</h4>
+        <div class="recent-list">
+          @for (recent of recentActions(); track recent.id) {
+            <div class="recent-item">
+              <div class="recent-status" [ngClass]="recent.status"></div>
+              <div class="recent-content">
+                <span class="recent-action">{{ recent.action }}</span>
+                <span class="recent-time">{{ recent.time }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="notifications-section">
+        <h4>Notifications</h4>
+        <div class="notification-item">
+          <div class="notification-dot"></div>
+          <span>3 pending approvals</span>
+        </div>
+        <div class="notification-item">
+          <div class="notification-dot warning"></div>
+          <span>Server maintenance in 2 hours</span>
+        </div>
+      </div>
+    </div>

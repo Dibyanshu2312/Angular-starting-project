@@ -1,0 +1,13 @@
+<input (input)="onInput($event)" placeholder="Type something..." />
+<button (click)="clickButton()">Update Paragraph</button>
+
+<p>{{ click }}</p>  <!-- Changes ONLY when button is clicked -->
+
+<input type= "text" [(ngModel)]="name" placeholder="Type something..." />
+<p appHighlightDirective>This paragraph will be highlighted</p>
+
+<div *ngIf="isLoggedIn; else loginblock"> Welcome, user!</div>
+<ng-template #loginblock>
+  <div> Please login to continue</div>
+</ng-template>
+

@@ -1,0 +1,128 @@
+ .actions-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 380px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .actions-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    }
+
+    .card-header h3 {
+      margin: 0 0 2rem 0;
+      color: #1a1a1a;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .actions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .action-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1rem;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: white;
+      font-family: inherit;
+    }
+
+    .action-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .action-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .action-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .recent-section,
+    .notifications-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .recent-section h4,
+    .notifications-section h4 {
+      margin: 0 0 1rem 0;
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .recent-item,
+    .notification-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem;
+      background: #f8f9fa;
+      border-radius: 12px;
+      margin-bottom: 0.5rem;
+    }
+
+    .recent-status,
+    .notification-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    .recent-status.completed {
+      background: #28a745;
+    }
+
+    .recent-status.pending {
+      background: #ffc107;
+    }
+
+    .notification-dot {
+      background: #28a745;
+    }
+
+    .notification-dot.warning {
+      background: #ffc107;
+    }
+
+    .recent-content {
+      flex: 1;
+    }
+
+    .recent-action {
+      display: block;
+      font-size: 0.9rem;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .recent-time {
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    .notification-item span {
+      font-size: 0.85rem;
+      color: #333;
+    }
