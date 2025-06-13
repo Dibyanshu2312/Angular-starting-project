@@ -1,25 +1,12 @@
 <div class="dashboard-container">
-      <div class="container">
-        <h1 class="dashboard-title">Modern Dashboard</h1>
-        <div class="components-grid">
-          <app-user-profile />
-          <app-analytics-chart />
-          <app-quick-actions />
-          <app-eventbinding />
-          <app-form />
-          <app-piping />
-          <app-switcher/>
-     
-          <!-- The app-demo component displays a message passed from the parent component via the 'message' binding -->
-          <app-demo [message]="name"/>
-          
-          <input type="text" [(ngModel)]="name" placeholder="Enter message for child" />
+  <div class="container">
+    <h1 class="dashboard-title">Modern Dashboard</h1>
+    <div class="components-grid">
+      <app-dashboard>
 
-          <div style="text-align: center;">
-          <app-demo [message]="name" (messageEvent0)="reciveMessage($event)"/>
-          {{childmsg}}
-          </div>
-        </div>
-      </div>
+      </app-dashboard>
+      <app-addproduct/>
     </div>
+  </div>
+</div>
 <router-outlet />

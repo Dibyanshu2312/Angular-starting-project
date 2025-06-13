@@ -1,0 +1,76 @@
+
+<table class="fancy-table">
+  <thead>
+    <tr>
+      <th class="text-center">id</th>
+      <th class="text-center">image</th>
+      <th class="text-center">title</th>
+      <th class="text-center">price</th>
+      <th class="text-center">Rating(rate)</th>
+      <th class="text-center">Rating(count)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of product">
+      <td>{{item.id}}</td>
+      <td>
+        <img class="product-img" src="{{item.image}}" alt="" />
+      </td>
+      <td class="text-center title-cell">{{item.title}}</td>
+      <td class="text-center">{{item.price}}</td>
+      <td class="text-center">{{item.rating?.rate}}</td>
+      <td class="text-center">{{item.rating?.count}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<style>
+  .fancy-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+
+  .fancy-table th,
+  .fancy-table td {
+    padding: 14px 16px;
+    text-align: center;
+  }
+
+  .fancy-table thead {
+    background: linear-gradient(90deg, #f8b500 0%, #fceabb 100%);
+    color: #333;
+    font-size: 1.1em;
+  }
+
+  .fancy-table tbody tr {
+    transition: background 0.2s;
+  }
+
+  .fancy-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  .fancy-table tbody tr:hover {
+    background: #ffe9b3;
+  }
+
+  .product-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #f8b500;
+    box-shadow: 0 2px 8px rgba(248, 181, 0, 0.1);
+  }
+
+  .title-cell {
+    font-weight: 500;
+    color: #b36b00;
+  }
+</style>
