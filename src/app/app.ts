@@ -13,7 +13,6 @@ import { Piping } from './piping/piping';
 import { Dashboard } from './dashboard/dashboard';
 import { Addproduct, Myservice } from './services/myservice';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { AddProductComponent } from './addproduct/addproduct';  
 
 @Component({
   selector: 'app-root',
@@ -22,7 +21,7 @@ import { AddProductComponent } from './addproduct/addproduct';
     Dashboard,
     CommonModule,
     RouterModule,
-    AddProductComponent,
+    
     FormsModule,
     HttpClientModule
 ],
